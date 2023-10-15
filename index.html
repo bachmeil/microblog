@@ -1,4 +1,26 @@
 <blog>
+# Everything is a single file
+
+You can [view the current version here](https://github.com/bachmeil/microblog/blob/main/index.html). I created a Github repo, turned on Github pages
+for the repo, and added a snippet to html: `File > Preferences > Configure User Snippets`.
+
+```
+"Post": {
+    "prefix": ["post","blog"],
+    "body": [
+        "<blog>",
+        "# $1",
+        "",
+        "*$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE*",
+        "</blog>"
+    ]
+}
+```
+
+*2023-10-15*
+</blog>
+
+<blog>
 # This is my microblog
 
 This is hosted on Github pages. I use the online editor. It's an html file, so there's nothing to build.
