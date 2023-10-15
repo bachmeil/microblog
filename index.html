@@ -1,0 +1,42 @@
+<blog>
+# This is my microblog
+
+This is hosted on Github pages. I use the online editor. It's an html file, so there's nothing to build.
+
+Posts are written in markdown. Math is supported.
+
+*2023-10-15*
+</blog>
+    
+    <body onhashchange="changecontent()">
+    <div id="content" class="content"></div>
+    <div id="footer"></div>
+    </body>
+    
+    <style>
+    body {
+      max-width: 760px;
+      margin: auto;
+      margin-bottom: 125px;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    </style>
+    
+    <script>
+    </script>
+    
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.2.0/markdown-it.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it-texmath/texmath.min.js"></script>
+    <script>
+    var md = markdownit({html: true}).use(texmath, { engine: katex });
+    for (post of document.getElementsByTagName("blog")) {
+      post.innerHTML = md.render(post.innerHTML);
+    }
+    </script>
+    
