@@ -1,4 +1,4 @@
-<blog>
+<blog style="display:none">
 # Everything is a single file
 
 You can [view the current version here](https://github.com/bachmeil/microblog/blob/main/index.html). I created a Github repo, turned on Github pages
@@ -20,7 +20,7 @@ for the repo, and added a snippet to html: `File > Preferences > Configure User 
 *2023-10-15*
 </blog>
 
-<blog>
+<blog style="display:none">
 # This is my microblog
 
 This is hosted on Github pages. I use the online editor. It's an html file, so there's nothing to build.
@@ -59,6 +59,7 @@ Posts are written in markdown. Math is supported.
     var md = markdownit({html: true}).use(texmath, { engine: katex });
     for (post of document.getElementsByTagName("blog")) {
       post.innerHTML = md.render(post.innerHTML);
+      post.style.display = "";
     }
     </script>
     
