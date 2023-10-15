@@ -1,3 +1,11 @@
+<blog style=
+# How will this scale?
+
+I have no idea. Every post is converted to html and displayed on page load. The way to find out is to test it.
+
+*2023-10-15*
+</blog>
+
 <blog style="display:none">
 # Everything is a single file
 
@@ -8,7 +16,7 @@ for the repo, and added a snippet to html: `File > Preferences > Configure User 
 "Post": {
     "prefix": ["post","blog"],
     "body": [
-        "<blog>",
+        "<blog style="display:none">",
         "# $1",
         "",
         "*$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE*",
